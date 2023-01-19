@@ -42,10 +42,10 @@ namespace Discrete.NET.Tests
         [TestMethod]
         public void TestBigIntConversionForSmallResidueInt()
         {
-            var world = new ResidueNumberSystemWorld(1);
+            var world = new ResidueNumberSystemWorld(5);
             var i = world.CreateInt("12345");
 
-            Assert.AreEqual(i.ToBigInteger(), new BigInteger(12345));
+            Assert.AreEqual(new BigInteger(12345), i.ToBigInteger());
         }
 
         [TestMethod]
@@ -54,7 +54,7 @@ namespace Discrete.NET.Tests
             var world = new ResidueNumberSystemWorld(20);
             var i = world.CreateInt("47326489234723743284274023842348623948237498");
 
-            Assert.AreEqual(i.ToBigInteger(), BigInteger.Parse("47326489234723743284274023842348623948237498"));
+            Assert.AreEqual(BigInteger.Parse("47326489234723743284274023842348623948237498"), i.ToBigInteger());
         }
 
         [TestMethod]
@@ -66,7 +66,7 @@ namespace Discrete.NET.Tests
 
             var i3 = i + i2;
 
-            Assert.AreEqual(i3.ToBigInteger(), new BigInteger(66666));
+            Assert.AreEqual(new BigInteger(66666), i3.ToBigInteger());
         }
 
         [TestMethod]
@@ -78,7 +78,7 @@ namespace Discrete.NET.Tests
 
             var i3 = i - i2;
 
-            Assert.AreEqual(i3.ToBigInteger(), new BigInteger(10));
+            Assert.AreEqual(new BigInteger(10), i3.ToBigInteger());
         }
 
         [TestMethod]
@@ -90,7 +90,7 @@ namespace Discrete.NET.Tests
 
             var i3 = i * i2;
 
-            Assert.AreEqual(i3.ToBigInteger(), new BigInteger(50));
+            Assert.AreEqual(new BigInteger(50), i3.ToBigInteger());
         }
 
         [TestMethod]
@@ -102,7 +102,7 @@ namespace Discrete.NET.Tests
 
             var i3 = i + i2;
 
-            Assert.AreEqual(i3.ToBigInteger(), BigInteger.Parse("47326489234723778023221353689694858886484822"));
+            Assert.AreEqual(BigInteger.Parse("47326489234723778023221353689694858886484822"), i3.ToBigInteger());
         }
 
         [TestMethod]

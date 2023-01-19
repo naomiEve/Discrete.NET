@@ -10,7 +10,7 @@ namespace Discrete.NET.Tests
             var value = Euclid.EuclidGCD(12121212, 21212121);
             Assert.IsTrue(value.HasValue);
 
-            Assert.AreEqual(value!.Value, 3030303);
+            Assert.AreEqual(3030303, value!.Value);
         }
 
         [TestMethod]
@@ -20,9 +20,9 @@ namespace Discrete.NET.Tests
 
             Assert.IsTrue(value.HasValue);
 
-            Assert.AreEqual(value!.Value.GCD, 7);
-            Assert.AreEqual(value!.Value.S, 161);
-            Assert.AreEqual(value!.Value.T, -652);
+            Assert.AreEqual(7, value!.Value.GCD);
+            Assert.AreEqual(161, value!.Value.S);
+            Assert.AreEqual(-652, value!.Value.T);
         }
 
         [TestMethod]

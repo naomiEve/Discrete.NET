@@ -7,21 +7,32 @@
         public void TestCongruenceSimpleReduction()
         {
             var congruence = new Congruence(2, 3, 5);
-            congruence.Reduce();
+            congruence.Simplify();
 
             Assert.IsTrue(congruence.Reduced);
 
-            Assert.AreEqual(congruence.A, 1);
-            Assert.AreEqual(congruence.B, 4);
-            Assert.AreEqual(congruence.N, 5);
+            Assert.AreEqual(1, congruence.A);
+            Assert.AreEqual(4, congruence.B);
+            Assert.AreEqual(5, congruence.N);
         }
 
         [TestMethod]
-        public void TestCongruenceNotReduced()
+        public void TestCongruenceSimplifiedAndReduced()
         {
             var congruence = new Congruence(6, 12, 15);
-            congruence.Reduce();
+            congruence.Simplify();
 
+            Assert.IsTrue(congruence.Simplified);
+            Assert.IsTrue(congruence.Reduced);
+        }
+
+        [TestMethod]
+        public void TestCongruenceIrreducible()
+        {
+            var congruence = new Congruence(6, 8, 36);
+            congruence.Simplify();
+
+            Assert.IsTrue(congruence.Simplified);
             Assert.IsFalse(congruence.Reduced);
         }
 
@@ -34,9 +45,9 @@
             try
             {
                 var congruence3 = congruence + congruence2;
-                Assert.AreEqual(congruence3.A, congruence.A + congruence2.A);
-                Assert.AreEqual(congruence3.B, congruence.B + congruence2.B);
-                Assert.AreEqual(congruence3.N, congruence.N);
+                Assert.AreEqual(congruence.A + congruence2.A, congruence3.A);
+                Assert.AreEqual(congruence.B + congruence2.B, congruence3.B);
+                Assert.AreEqual(congruence.N, congruence3.N);
             }
             catch (NotSameModuloException e)
             {
@@ -53,9 +64,9 @@
             try
             {
                 var congruence3 = congruence * congruence2;
-                Assert.AreEqual(congruence3.A, congruence.A * congruence2.A);
-                Assert.AreEqual(congruence3.B, congruence.B * congruence2.B);
-                Assert.AreEqual(congruence3.N, congruence.N);
+                Assert.AreEqual(congruence.A * congruence2.A, congruence3.A);
+                Assert.AreEqual(congruence.B * congruence2.B, congruence3.B);
+                Assert.AreEqual(congruence.N, congruence3.N);
             }
             catch (NotSameModuloException e)
             {
@@ -72,9 +83,9 @@
             try
             {
                 var congruence3 = congruence - congruence2;
-                Assert.AreEqual(congruence3.A, congruence.A - congruence2.A);
-                Assert.AreEqual(congruence3.B, congruence.B - congruence2.B);
-                Assert.AreEqual(congruence3.N, congruence.N);
+                Assert.AreEqual(congruence.A - congruence2.A, congruence3.A);
+                Assert.AreEqual(congruence.B - congruence2.B, congruence3.B);
+                Assert.AreEqual(congruence.N, congruence3.N);
             }
             catch (NotSameModuloException e)
             {
