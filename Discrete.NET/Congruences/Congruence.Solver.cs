@@ -50,11 +50,6 @@ namespace Discrete.NET.Congruences
             if (Reduced)
                 return;
 
-            // If the GCD isn't 1, we cannot reduce this any further.
-            // We don't have an invertible element.
-            if (euclid.GCD != 1)
-                return;
-
             A *= euclid.S;
             B *= euclid.S;
 
