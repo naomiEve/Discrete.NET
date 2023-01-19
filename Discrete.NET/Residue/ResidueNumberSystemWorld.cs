@@ -1,5 +1,7 @@
-﻿using Discrete.NET.Prime;
+﻿using System.Runtime.CompilerServices;
+using Discrete.NET.Prime;
 
+[assembly: InternalsVisibleTo("Discrete.NET.Tests")]
 namespace Discrete.NET.Residue
 {
     /// <summary>
