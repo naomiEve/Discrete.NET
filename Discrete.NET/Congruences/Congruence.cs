@@ -23,9 +23,14 @@ namespace Discrete.NET.Congruences
         public int N { get; private set; }
 
         /// <summary>
-        /// Was this congruence reduced?
+        /// Was this congruence reduced into the form x ≅ b (mod n)?
         /// </summary>
         public bool Reduced { get; private set; }
+
+        /// <summary>
+        /// Was this congruence simplified?
+        /// </summary>
+        public bool Simplified { get; private set; }
 
         /// <summary>
         /// Constructs a new congruence with the given parameters.
@@ -70,8 +75,8 @@ namespace Discrete.NET.Congruences
         /// <returns>The value.</returns>
         public int ValueFor(int k)
         {
-            if (!Reduced)
-                Reduce();
+            if (!Simplified)
+                Simplify();
 
             return B + (k * N);
         }

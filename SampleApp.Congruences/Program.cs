@@ -15,7 +15,7 @@ if (a == null ||
 
 var cong = new Congruence(a.Value, b.Value, n.Value);
 Console.WriteLine($"The congruence before attempting to reduce: {cong}");
-cong.Reduce();
+cong.Simplify();
 Console.WriteLine($"The congruence after attempting to reduce: {cong}");
 
 static int? GetIntFromStdin(string prompt)
