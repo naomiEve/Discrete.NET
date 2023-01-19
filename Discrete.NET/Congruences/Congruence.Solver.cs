@@ -1,22 +1,11 @@
 ﻿using Discrete.NET.Euclidean;
+using Discrete.NET.Extensions;
 
 namespace Discrete.NET.Congruences
 {
     /// <inheritdoc/>
     public partial class Congruence
-    {
-        /// <summary>
-        /// Proper modulo for negative numbers.
-        /// </summary>
-        /// <param name="x">The number.</param>
-        /// <param name="m">The modulo.</param>
-        /// <returns>The modulo result.</returns>
-        private static int Modulo(int x, int m)
-        {
-            return (x % m + m) % m;
-        }
-
-        /// <summary>
+    {        /// <summary>
         /// Reduces the congruence to its most simple form.
         /// </summary>
         public void Reduce()
@@ -38,8 +27,8 @@ namespace Discrete.NET.Congruences
             A *= euclid.S;
             B *= euclid.S;
 
-            A = Modulo(A, N);
-            B = Modulo(B, N);
+            A = A.Modulo(N);
+            B = B.Modulo(N);
 
             Reduced = true;
         }
