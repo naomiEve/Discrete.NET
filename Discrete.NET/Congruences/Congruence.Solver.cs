@@ -45,7 +45,7 @@ namespace Discrete.NET.Congruences
         /// <summary>
         /// Reduces the into the form x ≅ b (mod n).
         /// </summary>
-        private void Reduce(EuclidResult euclid)
+        private void Reduce(EuclidResult<int> euclid)
         {
             if (Reduced)
                 return;
