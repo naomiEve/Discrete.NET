@@ -1,5 +1,4 @@
 ﻿using Discrete.NET.Congruences;
-using Discrete.NET.Euclidean;
 
 var a = GetIntFromStdin("Give the a parameter: ");
 var b = GetIntFromStdin("Give the b parameter: ");
