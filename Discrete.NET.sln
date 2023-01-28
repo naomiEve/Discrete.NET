@@ -5,11 +5,13 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discrete.NET", "Discrete.NET\Discrete.NET.csproj", "{C7A46FD5-AEA8-4CF0-8465-09EAB9531722}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp.Congruences", "SampleApp.Congruences\SampleApp.Congruences.csproj", "{F37CDA6F-9424-4888-9922-A1E1FE120219}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApp.Congruences", "SampleApp.Congruences\SampleApp.Congruences.csproj", "{F37CDA6F-9424-4888-9922-A1E1FE120219}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp.Residue", "SampleApp.Residue\SampleApp.Residue.csproj", "{262EBB9D-1F81-4D50-A732-7F43B1270D82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApp.Residue", "SampleApp.Residue\SampleApp.Residue.csproj", "{262EBB9D-1F81-4D50-A732-7F43B1270D82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discrete.NET.Tests", "Discrete.NET.Tests\Discrete.NET.Tests.csproj", "{400564F9-8417-4B99-9728-3D4C46F03B36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discrete.NET.Tests", "Discrete.NET.Tests\Discrete.NET.Tests.csproj", "{400564F9-8417-4B99-9728-3D4C46F03B36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp.RSA", "SampleApp.RSA\SampleApp.RSA.csproj", "{2D397114-D5F6-4ECB-BED2-C93DA0E6E835}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{400564F9-8417-4B99-9728-3D4C46F03B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{400564F9-8417-4B99-9728-3D4C46F03B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{400564F9-8417-4B99-9728-3D4C46F03B36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D397114-D5F6-4ECB-BED2-C93DA0E6E835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D397114-D5F6-4ECB-BED2-C93DA0E6E835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D397114-D5F6-4ECB-BED2-C93DA0E6E835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D397114-D5F6-4ECB-BED2-C93DA0E6E835}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
