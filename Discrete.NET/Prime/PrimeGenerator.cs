@@ -33,11 +33,25 @@
         /// </summary>
         /// <param name="length"></param>
         /// <returns></returns>
-        public static int GeneratePrimeNumber()
+        public static int GeneratePrimeNumber(int min = 0, int max = 500000)
         {
             var p = 4;
             while (!PrimalityCheck(p))
-                p = GeneratePrimeCandidate();
+                p = (int)GeneratePrimeCandidate(min, max);
+
+            return p;
+        }
+
+        /// <summary>
+        /// Generates a long prime number.
+        /// </summary>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        public static long GenerateLongPrimeNumber(long min = int.MaxValue, long max = long.MaxValue - 1)
+        {
+            var p = 4L;
+            while (!PrimalityCheck(p))
+                p = GeneratePrimeCandidate(min, max);
 
             return p;
         }
@@ -47,9 +61,9 @@
         /// </summary>
         /// <param name="length">The length in bits of the candidate.</param>
         /// <returns>The prime candidate.</returns>
-        private static int GeneratePrimeCandidate()
+        private static long GeneratePrimeCandidate(long min, long max)
         {
-            var p = _rng.Next(0, 500000);
+            var p = _rng.NextInt64(min, max);
 
             // Set the LSB (to ensure the number is actually odd).
             p |= 1;

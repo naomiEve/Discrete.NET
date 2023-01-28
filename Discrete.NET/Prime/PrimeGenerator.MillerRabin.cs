@@ -12,7 +12,7 @@ namespace Discrete.NET.Prime
         /// <param name="n">The number to check.</param>
         /// <param name="checks">The amount of checks.</param>
         /// <returns>Whether this value is a prime.</returns>
-        public static bool PrimalityCheck(int n, int k = 128)
+        public static bool PrimalityCheck(long n, int k = 128)
         {
             if ((n < 2) || (n % 2 == 0))
                 return n == 2;
@@ -23,7 +23,7 @@ namespace Discrete.NET.Prime
 
             for (var i = 0; i < k; i++)
             {
-                var a = _rng.Next(n - 1) + 1;
+                var a = _rng.NextInt64(n - 1) + 1;
                 var temp = s;
                 var mod = BigInteger.ModPow(a, s, n);
 
